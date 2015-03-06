@@ -18,10 +18,6 @@ var uglify      = require('gulp-uglify');
 var sourcemaps  = require('gulp-sourcemaps');
 var annotate    = require('gulp-ng-annotate');
 
-//html
-var templatecache = require('gulp-angular-templatecache')
-var htmlify       = require('gulp-angular-htmlify')
-
 paths = {
   libs: [
     'bower_components/angular/angular.js',
@@ -66,21 +62,9 @@ gulp.task('js', function() {
   .pipe(gulp.dest('build'));
 });
 
-gulp.task('templates', function() {
-  gulp.src('app/**/*.html')
-    .pipe(templatecache({
-      standalone: true,
-      root: "/app/",
-      module: "templates"
-    }))
-    // .pipe(htmlify())
-    .pipe(gulp.dest('build'));
-});
-
 gulp.task('watch', function () {
   gulp.watch('./app/**/*.js', ['js']);
   gulp.watch('./app/**/*.sass', ['sass']);
-  gulp.watch('./app/**/*.html', ['templates']);
   browserSync({
     server: {baseDir: 'build'},
     browser: 'google chrome',
@@ -103,4 +87,4 @@ gulp.task('libs', function() {
     .pipe(gulp.dest('build'));
 });
 
-gulp.task('build', ['copy', 'templates', 'libs', 'js', 'sass']);
+gulp.task('build', ['copy', 'libs', 'js', 'sass']);
