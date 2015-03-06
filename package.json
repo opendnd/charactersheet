@@ -1,0 +1,42 @@
+{
+  "name": "cal-app",
+  "version": "0.0.1",
+  "description": "Calander app with angular",
+  "authors": [
+    "Sean Costello <seancostellodp@gmail.com>",
+    "Josh Cataldi <email>"
+  ],
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/opendnd/charactersheet.git"
+},
+  "bugs": {
+  "url": "https://github.com/opendnd/charactersheet/issues"
+},
+  "keywords": [
+  "dungeons",
+  "dragons",
+  "character",
+  "sheet"
+],
+  "dependencies": {
+    "gulp": "*",
+    "browser-sync": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-concat": "*",
+    "gulp-plumber": "*",
+    "gulp-uglify": "*",
+    "gulp-util": "*",
+    "gulp-watch": "0.7.1",
+    "node-notifier": "*",
+    "gulp-ruby-sass": "*",
+    "gulp-sourcemaps": "*",
+    "browserify": "*",
+    "vinyl-buffer": "*",
+    "vinyl-source-stream": "*",
+    "gulp-angular-templatecache": "*",
+    "gulp-angular-htmlify": "*",
+    "gulp-ng-annotate": "*"
+  },
+  "license": "MIT"
+}
