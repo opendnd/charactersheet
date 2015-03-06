@@ -20,12 +20,7 @@ var annotate    = require('gulp-ng-annotate');
 paths = {
   libs: [
     'bower_components/angular/angular.js',
-    'bower_components/angular-animate/angular-animate.js',
-    'bower_components/angular-material/angular-material.js',
-    'bower_components/angular-ui-router/release/angular-ui-router.js',
-    'bower_components/hammerjs/hammer.js',
-    'bower_components/ryanmullins-angular-hammer/angular.hammer.js',
-    'bower_components/ngGAPI/gapi.js'
+    'bower_components/angular-animate/angular-animate.js'
   ]
 };
 

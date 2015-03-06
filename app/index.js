@@ -1,5 +1,4 @@
-/*@ngInject*/
-var app = angular.module('sheet_app',['ngAnimate']);
+var app = angular.module('app',['ngAnimate']);
 
 /*@ngInject*/
 var sheetCtrl = app.controller('character_sheet', function($scope) {
