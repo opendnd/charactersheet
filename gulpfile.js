@@ -13,7 +13,6 @@ var sass        = require('gulp-ruby-sass');
 var prefix      = require('gulp-autoprefixer');
 
 //javascript
-var browserify  = require('browserify');
 var uglify      = require('gulp-uglify');
 var sourcemaps  = require('gulp-sourcemaps');
 var annotate    = require('gulp-ng-annotate');
@@ -30,11 +29,6 @@ paths = {
   ]
 };
 
-// targets = {
-//   css: 'build/css',
-//   js: 'build'
-// }
-
 gulp.task('default', ['build', 'watch']);
 
 function generateSass () {
@@ -50,10 +44,7 @@ function generateSass () {
 gulp.task('sass', generateSass);
 
 gulp.task('js', function() {
-  browserify('app/index.js', { debug: true })
-  .bundle()
-  .on('error', utils.log.bind(utils, 'Browserify Error'))
-  .pipe(source('app.js'))
+  gulp.src('app/index.js')
   .pipe(annotate())
   .pipe(buffer())
   .pipe(sourcemaps.init({loadMaps: true}))

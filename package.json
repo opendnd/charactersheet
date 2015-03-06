@@ -31,7 +31,6 @@
     "node-notifier": "*",
     "gulp-ruby-sass": "*",
     "gulp-sourcemaps": "*",
-    "browserify": "*",
     "vinyl-buffer": "*",
     "vinyl-source-stream": "*",
     "gulp-ng-annotate": "*"
